@@ -6,6 +6,7 @@ SRC		=	ft_toupper.c	\
 			ft_isalnum.c	\
 			ft_isascii.c	\
 			ft_isprint.c	\
+			ft_atoi.c		\
 
 OBJ		=	$(SRC:.c=.o)
 
