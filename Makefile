@@ -1,5 +1,6 @@
 NAME	=	libft.a
 SRC		=	ft_toupper.c	\
+			ft_tolower.c	\
 
 OBJ		=	$(SRC:.c=.o)
 
