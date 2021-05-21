@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 17:26:22 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/21 17:39:50 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/21 17:55:13 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *res;
+	unsigned char	*res;
 
 	res = s;
 	while (n)

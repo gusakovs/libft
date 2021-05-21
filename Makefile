@@ -9,6 +9,7 @@ SRC		=	ft_toupper.c	\
 			ft_atoi.c		\
 			ft_memset.c		\
 			ft_bzero.c		\
+			ft_memcpy.c		\
 
 OBJ		=	$(SRC:.c=.o)
 
