@@ -6,14 +6,14 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:48:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/20 14:59:05 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/21 15:46:24 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-int	ft_atoi(int c);
+int	ft_atoi(const char *str);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isascii(int c);
