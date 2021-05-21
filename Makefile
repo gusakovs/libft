@@ -7,6 +7,8 @@ SRC		=	ft_toupper.c	\
 			ft_isascii.c	\
 			ft_isprint.c	\
 			ft_atoi.c		\
+			ft_memset.c		\
+			ft_bzero.c		\
 
 OBJ		=	$(SRC:.c=.o)
 
