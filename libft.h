@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:48:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/21 18:20:29 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/23 14:07:53 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict stc, size_t n);
 void	*ft_memccpy(void *restrict dst, const void *restrict stc, int c, size_t n);
+size_t	ft_strlen(const char *s);
 
 #endif

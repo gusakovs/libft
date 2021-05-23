@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 18:16:16 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/23 15:11:35 by mgusakov         ###   ########.fr       */
+/*   Created: 2021/05/23 14:05:57 by mgusakov          #+#    #+#             */
+/*   Updated: 2021/05/23 14:08:30 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+size_t	ft_strlen(const char *s)
 {
 	size_t i;
-	unsigned char *chardst;
-	unsigned char *charsrc;
 
-	charsrc = (unsigned char *)src;
-	chardst = (unsigned char *)dst;
 	i = 0;
-	if (dst == NULL && src == NULL)
-	{
-		return (dst);
-	}
-	while (i < n && *charsrc != (unsigned char)c)
-	{
-		*chardst++ = *charsrc++;
+	while(*s++)
 		i++;
-	}
-	if (*charsrc == (unsigned char)c)
-	{
-		*chardst++ = *charsrc;
-		return(chardst);
-	}
-	return (NULL);
+	return (i);	
 }
