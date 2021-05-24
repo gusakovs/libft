@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 14:58:17 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/24 17:16:26 by mgusakov         ###   ########.fr       */
+/*   Created: 2021/05/24 16:23:13 by mgusakov          #+#    #+#             */
+/*   Updated: 2021/05/24 16:28:25 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	long int	n;
-	int	neg;
+	void *ptr;
 
-	neg = 1;
-	n = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			neg = -1;
-		str++;
-	}
-	while (*str && (*str >= '0' && *str <= '9'))
-	{
-		n *= 10;
-		n += *str - '0';
-		str++;
-	}
-	return (n * neg);
+	if (!(ptr = malloc(ft_strlen(s1) + 1)))
+		return (NULL);
+	ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);
+	return (ptr);
 }

@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 14:58:17 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/24 17:16:26 by mgusakov         ###   ########.fr       */
+/*   Created: 2021/05/24 16:12:34 by mgusakov          #+#    #+#             */
+/*   Updated: 2021/05/24 16:22:42 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_calloc(size_t count, size_t size)
 {
-	long int	n;
-	int	neg;
+	void	*ptr;
 
-	neg = 1;
-	n = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			neg = -1;
-		str++;
-	}
-	while (*str && (*str >= '0' && *str <= '9'))
-	{
-		n *= 10;
-		n += *str - '0';
-		str++;
-	}
-	return (n * neg);
+	if (!(ptr = malloc(count * size)))
+		return (NULL);
+	if (ptr)
+		ft_bzero(ptr, count * size);
+	return (ptr);
 }
