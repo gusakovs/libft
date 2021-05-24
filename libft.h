@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:48:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/24 16:26:31 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/24 18:16:10 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ void	*ft_memccpy(void *dst, const void *stc, int c, size_t n);
 char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);

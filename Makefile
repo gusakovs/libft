@@ -23,6 +23,9 @@ SRC		=	ft_toupper.c	\
 			ft_strlcat.c	\
 			ft_calloc.c		\
 			ft_strdup.c		\
+			ft_split.c		\
+			ft_strjoin.c	\
+			ft_substr.c		\
 
 OBJ		=	$(SRC:.c=.o)
 
