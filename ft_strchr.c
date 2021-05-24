@@ -6,17 +6,17 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 18:01:31 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/23 18:06:12 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/24 11:55:51 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t len;
-	size_t i;
-	char *str;
+	size_t	len;
+	size_t	i;
+	char	*str;
 
 	str = (char *)s;
 	i = 0;

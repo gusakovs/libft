@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 15:13:51 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/23 15:34:38 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/24 11:55:33 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *chardst;
-	unsigned char *charsrc;
-	size_t i;
+	unsigned char	*chardst;
+	unsigned char	*charsrc;
+	size_t			i;
 
 	i = 0;
 	charsrc = (unsigned char *)src;
