@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:58:17 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/24 17:16:26 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/25 16:27:59 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	long int	n;
-	int	neg;
+	int			neg;
 
 	neg = 1;
 	n = 0;

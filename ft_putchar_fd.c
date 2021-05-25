@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 16:23:13 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/25 16:36:04 by mgusakov         ###   ########.fr       */
+/*   Created: 2021/05/25 14:29:55 by mgusakov          #+#    #+#             */
+/*   Updated: 2021/05/25 14:30:39 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_putchar_fd(char c, int fd)
 {
-	void	*ptr;
-
-	ptr = malloc(ft_strlen(s1) + 1);
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);
-	return (ptr);
+	write(fd, &c, 1);
 }

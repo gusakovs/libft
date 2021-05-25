@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 13:26:01 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/24 14:19:23 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/05/25 16:37:33 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	while (src[i])
 		i++;
-	return (i);	
+	return (i);
 }
