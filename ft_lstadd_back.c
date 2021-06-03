@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 12:20:52 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/06/02 12:47:50 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/03 12:15:41 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
-	
+
 	if (!lst)
 		return ;
 	if (!*lst)

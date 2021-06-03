@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:24:06 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/28 14:55:11 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/03 12:16:50 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst && lst->next)
-		lst = lst->next;	
+		lst = lst->next;
 	return (lst);
 }

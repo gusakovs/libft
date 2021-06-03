@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:11:37 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/28 14:35:37 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/03 12:17:10 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i; 
+	int	i;
 
-	i = 0; 
+	i = 0;
 	while (lst)
 	{
 		i++;
