@@ -6,11 +6,22 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:25:36 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/05/25 17:35:40 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/04 17:39:23 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	**ft_free(char **str, int i)
+{
+	int	n;
+
+	n = 0;
+	while (n++ < i)
+		free(str[n]);
+	free(str);
+	return (NULL);
+}
 
 static int	ft_wc(char const *s, char c)
 {
@@ -63,13 +74,14 @@ static char	**ft_splitter(char **str, char const *s, char c)
 		if (*s && *s != c)
 		{
 			ptr[i] = ft_malloc(s, c);
+			if (!ptr)
+				return (ft_free(str, i));
 			j = 0;
 			while (*s && *s != c)
 				ptr[i][j++] = *s++;
 			ptr[i++][j] = '\0';
 		}
 	}
-	ptr[i] = ft_malloc(s, c);
 	ptr[i] = NULL;
 	return (ptr);
 }
@@ -80,7 +92,7 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	ptr = (char **)malloc(sizeof(char *) * ft_wc(s, c) + 1);
+	ptr = malloc(sizeof(char *) * (ft_wc(s, c) + 1));
 	if (!ptr)
 		return (NULL);
 	ft_splitter(ptr, s, c);
