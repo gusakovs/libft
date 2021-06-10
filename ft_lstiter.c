@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 14:21:18 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/06/03 12:16:26 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/10 11:41:09 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void(*f)(void *))
 {
+	if (!lst || !f)
+		return ;
 	while (lst)
 	{
 		f(lst->content);

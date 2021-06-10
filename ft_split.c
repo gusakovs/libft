@@ -6,95 +6,89 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:25:36 by mgusakov          #+#    #+#             */
-/*   Updated: 2021/06/04 17:39:23 by mgusakov         ###   ########.fr       */
+/*   Updated: 2021/06/10 12:05:38 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_free(char **str, int i)
+static size_t	ft_wc(char const *s, char c)
 {
-	int	n;
+	size_t	ct;
 
-	n = 0;
-	while (n++ < i)
-		free(str[n]);
-	free(str);
-	return (NULL);
-}
-
-static int	ft_wc(char const *s, char c)
-{
-	int	count;
-
-	count = 0;
+	ct = 0;
 	while (*s)
 	{
+		while (*s && *s != c)
+			s++;
+		ct++;
 		while (*s && *s == c)
 			s++;
-		if (*s != c)
-		{
-			count++;
-			while (*s && *s != c)
-				s++;
-		}
 	}
-	return (count);
+	return (ct);
 }
 
-static void	*ft_malloc(char const *s, char c)
+static size_t	ft_wrdlen(char const *s, char c)
 {
-	char	*ptr;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (*s && *s != c)
 	{
-		i++;
 		s++;
+		i++;
 	}
-	ptr = malloc(sizeof(char) * i + 1);
-	if (!ptr)
-		return (NULL);
-	return (ptr);
+	return (i);
 }
 
-static char	**ft_splitter(char **str, char const *s, char c)
+static char	*ft_malloc(char const *s, char c)
 {
-	char	**ptr;
+	char	*str;
+	size_t	wrdlen;
+
+	wrdlen = ft_wrdlen(s, c);
+	str = ft_calloc(sizeof(char), (wrdlen + 1));
+	if (!str)
+		return (NULL);
+	ft_memcpy(str, s, wrdlen);
+	return (str);
+}
+
+static void	*ft_free(char **tab)
+{
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	ptr = str;
-	while (*s)
-	{
-		while (*s && *s == c)
-			s++;
-		if (*s && *s != c)
-		{
-			ptr[i] = ft_malloc(s, c);
-			if (!ptr)
-				return (ft_free(str, i));
-			j = 0;
-			while (*s && *s != c)
-				ptr[i][j++] = *s++;
-			ptr[i++][j] = '\0';
-		}
-	}
-	ptr[i] = NULL;
-	return (ptr);
+	while (tab[i])
+		free(tab[i++]);
+	free (tab);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
+	char	**tab;
+	size_t	wc;
+	size_t	i;
 
-	if (s == NULL)
+	i = 0;
+	if (!s)
 		return (NULL);
-	ptr = malloc(sizeof(char *) * (ft_wc(s, c) + 1));
-	if (!ptr)
+	while (*s && *s == c)
+		s++;
+	wc = ft_wc(s, c);
+	tab = malloc(sizeof(void *) * (wc + 1));
+	if (!tab)
 		return (NULL);
-	ft_splitter(ptr, s, c);
-	return (ptr);
+	while (i < wc)
+	{
+		tab[i] = ft_malloc(s, c);
+		if (!tab[i])
+			return (ft_free(tab));
+		s += ft_strlen(tab[i++]);
+		while (*s && *s == c)
+			s++;
+	}
+	tab[i] = NULL;
+	return (tab);
 }
