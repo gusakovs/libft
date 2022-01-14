@@ -5,41 +5,46 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mgusakov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/14 15:28:37 by mgusakov          #+#    #+#              #
-#    Updated: 2022/01/14 15:37:37 by mgusakov         ###   ########.fr        #
+#    Created: 2022/01/14 15:19:38 by mgusakov          #+#    #+#              #
+#    Updated: 2022/01/14 15:25:07 by mgusakov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libft.a
+NAME	=	gnl.a
 
 CC	=	gcc
 CFLAGS	=	-Wextra -Werror -Wall
 
-# dirs
-FT_DIR	=	ft/
-GNL_DIR	=	gnl/
+# directories
+SRC_DIR	=	./
 OBJ_DIR	=	obj/
-A	=	$(wildcard *.a)
+
+# files
+SRC_FILES =	$(wildcard *.c)
+OBJ_FILES =	$(SRC_FILES:.c=.o)
+SRC	=	$(SRC_FILES)
+OBJ	=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
 all:		$(NAME)
 
-$(NAME):	
-		@$(MAKE) -C $(FT_DIR)
-		@cp $(FT_DIR)/ft.a ./
-		@$(MAKE) -C $(GNL_DIR)
-		@cp $(GNL_DIR)/gnl.a ./
-		@ar rc $(NAME) $(NAME)
+$(NAME):	$(OBJ)
+		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
-		@echo "[LIBFT] Library Created"
+		@echo "[GNL] Library Created"
+		
+$(OBJ):		$(SRC)
+		@mkdir -p $(OBJ_DIR)
+		@$(CC) $(CFLAGS) -c $^
+		@mv -f *.o $(OBJ_DIR)
 
 clean:		
-		@make -C $(FT_DIR) clean
-		@make -C $(GNL_DIR) clean
-		
-fclean:		clean
-		@rm -f $(A)
-		@echo "[LIBFT] Execultable removed"
+		@rm -rf $(OBJ_DIR)
+		@echo "[GNL] Object Folder Removed"
 
-re:		fclean all
+fclean: 	clean
+		@rm -f $(NAME)
+		@echo "[GNL] Executable Removed"
+
+re:		fcleam all
 
 .PHONY:		all clean fclean re $(NAME)
