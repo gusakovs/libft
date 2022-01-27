@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:53:13 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:47:52 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:08:33 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

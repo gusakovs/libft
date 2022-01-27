@@ -6,16 +6,18 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:48:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:27:06 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:08:24 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "../gnl/get_next_line.h"
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# define BUFFER_SIZE 42
 
 typedef struct s_list
 {
@@ -53,6 +55,7 @@ void	*ft_memcpy(void *dst, const void *stc, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memccpy(void *dst, const void *stc, int c, size_t n);
 char	*ft_itoa(int n);
+char	*get_next_line(int fd);
 char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
@@ -65,7 +68,7 @@ char	**ft_split(char const *s, char c);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-size_t	ft_strlen(const char *s);
+size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 

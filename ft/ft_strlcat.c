@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 14:23:40 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:49:19 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:11:39 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

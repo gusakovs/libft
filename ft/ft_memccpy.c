@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 18:16:16 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:27 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:09:22 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

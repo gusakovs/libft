@@ -6,18 +6,21 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 14:05:57 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:49:25 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 20:27:59 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t  ft_strlen(const char *str)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (*s++)
-		i++;
-	return (i);
+	if(!str)
+		return (0);
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

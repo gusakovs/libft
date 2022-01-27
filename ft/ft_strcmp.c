@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 13:26:46 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:49:10 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:11:25 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

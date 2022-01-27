@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 14:11:37 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:25 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:09:19 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

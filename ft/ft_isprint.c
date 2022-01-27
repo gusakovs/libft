@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:54:25 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:47:58 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:08:46 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

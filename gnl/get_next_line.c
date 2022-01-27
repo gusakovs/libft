@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:29:07 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:43:55 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:18:40 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*line_to_ret(char *save)
 {

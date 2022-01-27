@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:37:14 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:47:55 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:08:42 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

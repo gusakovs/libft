@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 14:18:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:51 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:10:31 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_putchar(char c)
 {

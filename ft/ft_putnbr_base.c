@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 13:22:10 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:57 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:10:37 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_putnbr_base(unsigned long long nb, const char *base)
 {

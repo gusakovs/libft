@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 14:14:35 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:48:10 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:09:00 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void(*del)(void*))
 {

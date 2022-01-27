@@ -6,11 +6,11 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 17:25:36 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/14 15:49:05 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:10:49 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
 static size_t	ft_wc(char const *s, char c)
 {
