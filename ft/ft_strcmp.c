@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 13:26:46 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/25 19:11:25 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/02/09 18:06:05 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (!s1 || !s2)
 		return (0);
@@ -23,4 +23,3 @@ int	ft_strcmp(const char *s1, const char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-

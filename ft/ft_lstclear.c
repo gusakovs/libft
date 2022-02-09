@@ -6,13 +6,13 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 14:14:35 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/25 19:09:00 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/02/09 18:07:53 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void(*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*to_clear;
 	t_list	*next;

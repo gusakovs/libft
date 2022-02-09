@@ -6,7 +6,7 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:48:38 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/01/27 17:08:24 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/02/09 18:07:11 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_isalnum(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-int	ft_atoi(const char *str);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-int	ft_lstsize(t_list *lst);
-int	ft_putnbr_base(unsigned long long nb, const char *base);
-int	ft_putchar(char c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_isalnum(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_atoi(const char *str);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_lstsize(t_list *lst);
+int		ft_putnbr_base(unsigned long long nb, const char *base);
+int		ft_putchar(char c);
 void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
